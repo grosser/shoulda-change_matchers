@@ -4,7 +4,7 @@ so you can upgrade to shoulda 3 without rewriting major parts of your test-base.
     gem install shoulda-change_matchers
 
     # Gemfile
-    gem "shoulda-let", :require => "shoulda/change_matchers"
+    gem "shoulda-change_matchers", :require => "shoulda/change_matchers"
 
 Usage
 =====
