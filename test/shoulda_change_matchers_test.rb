@@ -1,7 +1,7 @@
 require "test/unit"
 require "shoulda"
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-#require "shoulda/change_matchers"
+require "shoulda/change_matchers"
 
 # simulate active_support being here ...
 class String
