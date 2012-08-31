@@ -1,14 +1,39 @@
-should_change / should_create / should_destroy matchers for shoulda 3 backported from shoulda 2
+should_change / should_create / should_destroy matchers for shoulda 3 backported from shoulda 2<br/>
+so you can upgrade to shoulda 3 without rewriting major parts of your test-base.
 
-Install
-=======
+    gem install shoulda-change_matchers
 
-    gem install shoulda_change_matchers
+    # Gemfile
+    gem "shoulda-let", :require => "shoulda/change_matchers"
 
 Usage
 =====
 
-    CODE EXAMPLE
+<!-- example -->
+    context "creating" do
+      setup do
+        User.create!
+        User.create!
+      end
+
+      should_change("the number of users", :by => 2) { User.count }
+    end
+
+    context "doing nothing" do
+      should_not_change("the number of users") { User.count }
+    end
+
+    context "creating" do
+      setup{ User.create! }
+      should_create :user
+    end
+
+    context "destroying" do
+      setup{ User.delete_all }
+      should_destroy :user
+    end
+<!-- example -->
+
 
 Author
 ======
