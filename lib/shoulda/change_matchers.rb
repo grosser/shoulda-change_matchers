@@ -1,6 +1,3 @@
-require "shoulda"
-require "shoulda/context"
-
 module Shoulda
   module ChangeMatchers
     # Macro that creates a test asserting a change between the return value
