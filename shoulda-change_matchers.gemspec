@@ -1,6 +1,6 @@
 name = "shoulda-change_matchers"
 
-Gem::Specification.new name, "0.0.2" do |s|
+Gem::Specification.new name, "0.0.3" do |s|
   s.summary = "should_change / should_create / should_destroy matchers for shoulda 3 backported from shoulda 2"
   s.authors = ["Michael Grosser"]
   s.email = "michael@grosser.it"

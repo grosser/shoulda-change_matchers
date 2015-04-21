@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    shoulda-change_matchers (0.0.2)
+    shoulda-change_matchers (0.0.3)
 
 GEM
   remote: https://rubygems.org/
