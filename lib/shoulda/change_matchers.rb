@@ -159,4 +159,5 @@ module Shoulda
   end
 end
 
-Test::Unit::TestCase.send :extend, Shoulda::ChangeMatchers
+klass = (defined?(MiniTest::Unit::TestCase) ? MiniTest::Unit::TestCase : Test::Unit::TestCase)
+klass.send :extend, Shoulda::ChangeMatchers

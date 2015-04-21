@@ -1,4 +1,19 @@
-require "test/unit"
+require "bundler/setup"
+
+BASE_CLASS = begin
+  gem "test-unit"
+  require "test/unit"
+  raise if ENV["BUNDLE_GEMFILE"].include?("minitest") # sanity check
+  Test::Unit::TestCase
+rescue LoadError
+  gem "minitest"
+  require "minitest/autorun"
+  MiniTest::Unit::TestCase.class_eval do
+    alias assert_not_equal refute_equal
+  end
+  MiniTest::Unit::TestCase
+end
+
 require "shoulda"
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "shoulda/change_matchers"
@@ -32,13 +47,15 @@ class User
   end
 end
 
-class ShouldaLetTest < Test::Unit::TestCase
-  setup do
-    User.count = 1
-  end
+class ShouldaLetTest < BASE_CLASS
+  context "test" do
+    setup do
+      User.count = 1
+    end
 
-  context "Readme" do
-    example = File.read(File.expand_path("../../Readme.md", __FILE__)).match(/<!-- example -->(.*)<!-- example -->/m)[1]
-    eval example
+    context "Readme" do
+      example = File.read(File.expand_path("../../Readme.md", __FILE__)).match(/<!-- example -->(.*)<!-- example -->/m)[1]
+      eval example
+    end
   end
 end

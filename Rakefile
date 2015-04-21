@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'appraisal'
+require 'wwtd/tasks'
 require 'bundler/gem_tasks'
 require 'bump/tasks'
 
@@ -7,6 +7,4 @@ task :test do
   sh "ruby test/shoulda_change_matchers_test.rb"
 end
 
-task :default do
-  sh "bundle exec rake appraisal:install && bundle exec rake appraisal test"
-end
+task default: "wwtd:local"

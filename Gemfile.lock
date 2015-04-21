@@ -9,9 +9,6 @@ GEM
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    appraisal (0.4.1)
-      bundler
-      rake
     bump (0.5.0)
     i18n (0.6.0)
     multi_json (1.3.6)
@@ -23,14 +20,15 @@ GEM
     shoulda-matchers (1.2.0)
       activesupport (>= 3.0.0)
     test-unit (2.5.2)
+    wwtd (0.9.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  appraisal
   bump
   rake
   shoulda
   shoulda-change_matchers!
   test-unit (>= 2.5.1)
+  wwtd
