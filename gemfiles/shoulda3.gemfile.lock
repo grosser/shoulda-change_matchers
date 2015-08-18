@@ -1,7 +1,7 @@
 PATH
   remote: ../
   specs:
-    shoulda-change_matchers (0.0.2)
+    shoulda-change_matchers (0.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -41,3 +41,6 @@ DEPENDENCIES
   shoulda-change_matchers!
   test-unit (>= 2.5.1)
   wwtd
+
+BUNDLED WITH
+   1.10.6

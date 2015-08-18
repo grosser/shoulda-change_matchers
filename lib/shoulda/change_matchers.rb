@@ -54,10 +54,10 @@ module Shoulda
       stmt << " to #{to.inspect}" if to
       stmt << " by #{by.inspect}" if by
 
-      before = lambda { @_before_should_change = block.bind(self).call }
+      before = lambda { @_before_should_change = instance_eval(&block) }
       should stmt, :before => before do
         old_value = @_before_should_change
-        new_value = block.bind(self).call
+        new_value = instance_eval(&block)
         assert_operator from, :===, old_value, "#{description} did not originally match #{from.inspect}" if from
         assert_not_equal old_value, new_value, "#{description} did not change" unless by == 0
         assert_operator to, :===, new_value, "#{description} was not changed to match #{to.inspect}" if to
@@ -95,9 +95,9 @@ module Shoulda
     #     end
     #   end
     def should_not_change(description, &block)
-      before = lambda { @_before_should_not_change = block.bind(self).call }
+      before = lambda { @_before_should_not_change = instance_eval(&block) }
       should "not change #{description}", :before => before do
-        new_value = block.bind(self).call
+        new_value = instance_eval(&block)
         assert_equal @_before_should_not_change, new_value, "#{description} changed"
       end
     end
