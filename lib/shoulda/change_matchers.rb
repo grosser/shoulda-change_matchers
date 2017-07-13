@@ -98,7 +98,12 @@ module Shoulda
       before = lambda { @_before_should_not_change = instance_eval(&block) }
       should "not change #{description}", :before => before do
         new_value = instance_eval(&block)
-        assert_equal @_before_should_not_change, new_value, "#{description} changed"
+        error_message = "#{description} changed"
+        if @_before_should_not_change.nil?
+          assert_nil new_value, error_message
+        else
+          assert_equal @_before_should_not_change, new_value, error_message
+        end
       end
     end
 
