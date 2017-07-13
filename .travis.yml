@@ -9,4 +9,6 @@ gemfile:
  - gemfiles/shoulda3.gemfile
  - gemfiles/shoulda3-minitest4.gemfile
  - gemfiles/shoulda3-minitest5.gemfile
+branches:
+  only: master
 script: bundle exec rake test
