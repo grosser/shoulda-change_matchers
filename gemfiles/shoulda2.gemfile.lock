@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    shoulda-change_matchers (0.0.5)
+    shoulda-change_matchers (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -29,7 +29,7 @@ CHECKSUMS
   power_assert (3.1.0) sha256=fefe98ed5d3140628138f3f9f9194d6ece01f1320e69700d3c928adca7518251
   rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
   shoulda (2.11.3) sha256=73fc7ec463b35c0e69d4df408cbcc4f109e5575f05f1cca71a633662d87d5387
-  shoulda-change_matchers (0.0.5)
+  shoulda-change_matchers (0.1.0)
   test-unit (3.7.8) sha256=689d1ca53f4d46f678b4e5d68d8e4294f87fc5e8b9238cc4de7c5727e8d65943
 
 BUNDLED WITH
