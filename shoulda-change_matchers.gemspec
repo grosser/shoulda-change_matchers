@@ -9,6 +9,5 @@ Gem::Specification.new name, "0.0.5" do |s|
   s.license = "MIT"
   s.add_development_dependency "rake"
   s.add_development_dependency "bump"
-  s.add_development_dependency "wwtd"
   s.add_development_dependency "shoulda"
 end
