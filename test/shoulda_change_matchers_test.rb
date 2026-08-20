@@ -8,10 +8,11 @@ BASE_CLASS = begin
 rescue LoadError
   gem "minitest"
   require "minitest/autorun"
-  MiniTest::Unit::TestCase.class_eval do
+  klass = defined?(MiniTest::Unit::TestCase) ? MiniTest::Unit::TestCase : Minitest::Test
+  klass.class_eval do
     alias assert_not_equal refute_equal
   end
-  MiniTest::Unit::TestCase
+  klass
 end
 
 require "shoulda"

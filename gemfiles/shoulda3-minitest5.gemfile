@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "minitest", "~> 5.6"
-gem "shoulda", "~>3.1"
+gem "minitest", "~> 5"
+gem "shoulda", "~> 3"
 
 gemspec path: "../"
