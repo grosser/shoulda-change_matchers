@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     shoulda-change_matchers (0.1.0)
 
@@ -54,7 +54,7 @@ PLATFORMS
 DEPENDENCIES
   bump
   rake
-  shoulda
+  shoulda (~> 4)
   shoulda-change_matchers!
   test-unit (>= 2.5.1)
 

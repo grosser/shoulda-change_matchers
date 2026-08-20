@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
-gemspec
+source "https://rubygems.org"
 
-gem "test-unit", ">=2.5.1"
+gem "test-unit", ">= 2.5.1"
+
+gemspec

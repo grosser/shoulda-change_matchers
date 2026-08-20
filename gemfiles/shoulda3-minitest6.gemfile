@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-gem "minitest", "~> 4"
+gem "minitest", "~> 6"
 gem "shoulda", "~> 3"
-gem "bigdecimal"
 
 gemspec path: "../"

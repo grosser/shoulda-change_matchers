@@ -1,7 +1,7 @@
 PATH
-  remote: ../
+  remote: ..
   specs:
-    shoulda-change_matchers (0.0.3)
+    shoulda-change_matchers (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -12,31 +12,50 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    bump (0.5.2)
-    i18n (0.7.0)
+    bigdecimal (4.1.2)
+    bump (0.10.0)
+    concurrent-ruby (1.3.8)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     minitest (4.7.5)
-    multi_json (1.11.0)
-    rake (10.4.2)
-    shoulda (3.5.0)
+    multi_json (1.21.1)
+    rake (13.4.2)
+    shoulda (3.6.0)
       shoulda-context (~> 1.0, >= 1.0.1)
-      shoulda-matchers (>= 1.4.1, < 3.0)
-    shoulda-context (1.2.1)
-    shoulda-matchers (2.8.0)
-      activesupport (>= 3.0.0)
-    thread_safe (0.3.5)
-    tzinfo (0.3.43)
-    wwtd (0.9.1)
+      shoulda-matchers (~> 3.0)
+    shoulda-context (1.2.2)
+    shoulda-matchers (3.1.3)
+      activesupport (>= 4.0.0)
+    thread_safe (0.3.6)
+    tzinfo (0.3.62)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bigdecimal
   bump
-  minitest (~> 4.7)
+  minitest (~> 4)
   rake
-  shoulda (~> 3.1)
+  shoulda (~> 3)
   shoulda-change_matchers!
-  wwtd
+
+CHECKSUMS
+  activesupport (4.0.13) sha256=0fcd111ced80b99339371a869dd187996349ab8ab5dfc08ee63730bdf66276d8
+  bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
+  bump (0.10.0) sha256=07929cf79031d2863f55e7b111e164566be10c43f8c42d67db7cb3b5745f0975
+  bundler (4.0.15) sha256=a4ceb882fe94a0e0ac63cd0813932bbfd631a14e5ac0b7975189b19a4d28d9e7
+  concurrent-ruby (1.3.8) sha256=b2f1be836e968ccc78ccfce277ea79c72a88633f22306782c16ff23fb415d1e1
+  i18n (0.9.5) sha256=43a58b55056ef171cae9b35df8aa5dee22d3a782f8a9bdd0ec8e8d36cfdf180d
+  minitest (4.7.5) sha256=3e0ac720a6d0787b4c822514739319493e187400e993fba96397bd64d58ae60e
+  multi_json (1.21.1) sha256=e6126a31808e3b4d19f483c775ceac34df190dffa62adfb63a165ee14ba68080
+  rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
+  shoulda (3.6.0) sha256=3d834f58cb393fdeb3cd53ec5b452473db55630534421ed9f6098b3a5ab289cb
+  shoulda-change_matchers (0.1.0)
+  shoulda-context (1.2.2) sha256=6c25ac1938b9009807c37c2e497fac84f768db3c89d67688459a2ce6bb6616d0
+  shoulda-matchers (3.1.3) sha256=078c53b8f38b2bdfe88c6d09d758380d62bdd411058e173f9aaf032ed66f55a7
+  thread_safe (0.3.6) sha256=9ed7072821b51c57e8d6b7011a8e282e25aeea3a4065eab326e43f66f063b05a
+  tzinfo (0.3.62) sha256=ea69564cb85d8318f89efced5ed7d117e64fa54dba1abce24d38c6c5dd3472a1
 
 BUNDLED WITH
-   1.10.6
+  4.0.15
